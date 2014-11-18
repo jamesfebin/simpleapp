@@ -1,0 +1,37 @@
+<template name="navbar"> 
+<div class="navbar">
+  <div class="navbar-inner">
+    <a class="brand" href="#">Simple App</a>
+    <ul class="nav">
+      
+      <li><a>{{> loginButtons}}</a></li>
+     
+    </ul>
+  </div>
+</div>
+</template>
+
+<template name="home">
+<center>
+<input type="text" id="roomName"/> <br/>
+<button class="btn btn-success" id="addRoom" > Add Room </button> <br/>
+<br/>
+{{#each rooms}}
+<p class="lead"> {{name}}  </p> <button class="btn btn-info" id="go" > <i class="icon-home icon-white"></i> </button> <br/> <br/>
+{{/each}}
+</center>
+</template>
+
+<template name="messages">
+<center >
+{{#each messages}}
+<p class="lead"> <b>{{email}} : </b> {{message}} </p> 
+
+{{/each}}
+<div style="position:absolute;bottom:0px;width:100%">
+<input type="text" id="message" style="height:30px;width:80%"/> 
+<button class="btn btn-success" id="send" > Send </button> 
+</div>
+
+</center>
+</template>
